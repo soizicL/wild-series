@@ -1,0 +1,23 @@
+// assets/css/app.scss
+
+// customize some Bootstrap variables
+$primary: darken(#428bca, 20%);
+
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
+
+// ------------------------CSS----------------------------//
+body {
+    background-color: lightgrey;
+}
+
+.navbar {
+    background-color: #2a3b6d;
+}
+
+a {
+    color : white;
+    font-size: 22px;
+    margin-right: 10px;
+    font-family: "Café Françoise", sans-serif;
+}
