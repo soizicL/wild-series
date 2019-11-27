@@ -1,0 +1,32 @@
+{# templates/wil/show.html.twig #}
+{% extends 'base.html.twig' %}
+{% block title %}{{ category.name }}{% endblock %}
+
+{% block body %}
+
+
+        <h1 class="text-center pt-3 pb-3">Category : {{ category.name }}</h1>
+        <h3 class="text-center pb-4">3 programs by category</h3>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col 12 pb-4">
+                    {% for program in programs %}
+                        <div class="media">
+                            <img class="align-self-start mr-3" src="{{ program.poster }}" alt="{{ program.title }} poster">
+                            <div class="media-body pb-4">
+                                <h1 class="mt-2">{{ program.id }} - {{ program.title  }}</h1>
+                                <p>{{ program.summary }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <a href="{{ path('wild_index') }}">
+            Retour à l'accueil
+        </a>
+
+
+{% endblock %}
