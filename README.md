@@ -12,4 +12,4 @@ Quête N°8 : FindBy() : récupérer plusieurs objets avec des filtres
 
 Quête N°9 : Les relations bidirectionnelles avec Doctrine
 
-  LIEN VIDEO LOOM POUR CHALLENGE : https://www.loom.com/share/9bb1385e7ae441949714bcc457014af5
+ 
