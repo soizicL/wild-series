@@ -25,10 +25,7 @@ Avant d'appeler la vue Twig, cette méthode devra remplacer tous les tirets du s
 
 Si aucun slug n'est fourni, il faudra afficher “Aucune série sélectionnée, veuillez choisir une série” dans la balise h1.
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 35502e765955dc194b7221a9b51b77f57513588d
 Quête N°6 : Crée les entités Category et Program (sans liaison)
 
 Crée deux entités Category et Program.
@@ -48,18 +45,12 @@ Pour le moment ces deux entités ne sont pas liées.
 
 Tu dois également mettre à jour ta base de données en conséquence.
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 35502e765955dc194b7221a9b51b77f57513588d
 Quête N°7 : Crée la relation ManyToOne
 
 Ce challenge sera très simple, car tu as besoin des quêtes suivantes pour mettre en place des choses plus complexes. Il s'agira uniquement de contrôler visuellement le code de la classe Program. Cette dernière doit être conforme à ce qui est expliqué dans la quête. C’est-à-dire, une classe Program.php qui contient une propriété category paramétrée comme il se doit dans ses annotations avec les getter et setter associés.
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 35502e765955dc194b7221a9b51b77f57513588d
 Quête N°8 : FindBy() : récupérer plusieurs objets avec des filtres
 
 Tu as utilisé pour le moment les méthodes findAll() et findOneBy().
@@ -76,10 +67,7 @@ Il est temps pour toi de mettre en pratique la méthode findBy(). Le principe re
 
 5.Crée une nouvelle vue templates/wild/category.html.twig qui affichera toutes les séries récupérés avec leurs id, titres et contenus.
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 35502e765955dc194b7221a9b51b77f57513588d
 Quête N°9 : Les relations bidirectionnelles avec Doctrine
 
 Pour pouvoir tester cette fonctionnalité et valider cette quête, tu dois créer en BDD plusieurs épisodes (une dizaine) et plusieurs saisons (environ 3) associées aux séries déjà existantes.
