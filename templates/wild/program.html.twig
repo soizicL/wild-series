@@ -1,0 +1,28 @@
+{# templates/wild/program.html.twig #}
+{% extends 'base.html.twig' %}
+{% block title %} {{ program.title }} {% endblock %}
+
+{% block body %}
+
+    <div class="media">
+        <img class="align-self-start mr-3" src="{{ program.poster }}" alt="{{ program.title }} poster">
+        <div class="media-body">
+            <h1 class="mt-2">{{ program.title }}</h1>
+            <p>{{ program.summary }}</p>
+            <p>Categories : {{ program.title }}</p>
+            <h2 class="my-5">Saison : </h2>
+            {% for season in seasons %}
+            <a href="{{ path('show_season', {'id' : season.id}) }}">
+                <p>{{ season.description }} - {{ season.year }}</p>
+            </a>
+            {% else %}
+            Aucun épisode trouvé
+            {% endfor %}
+        </div>
+        <div>
+            <a href="{{ path('wild_index') }}">
+                Retour à l'accueil
+            </a>
+        </div>
+    </div>
+{% endblock %}

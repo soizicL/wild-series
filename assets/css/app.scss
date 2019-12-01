@@ -9,6 +9,7 @@ $primary: darken(#428bca, 20%);
 // ------------------------CSS----------------------------//
 body {
     background-color: lightgrey;
+
 }
 
 .navbar {
@@ -21,3 +22,16 @@ a {
     margin-right: 10px;
     font-family: "Café Françoise", sans-serif;
 }
+
+.formatCardDeck {
+    height: 60rem;
+}
+
+.formatImg {
+    height: 40rem;
+}
+
+/*.poster {
+    max-width: 18rem;
+
+}*/
