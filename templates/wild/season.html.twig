@@ -9,7 +9,7 @@
             <p>Categorie : {{ program.category.name }}</p>
             <h1> {{ seasons.description }} :</h1>
             {% for episode in episodes %}
-                <a href="{{ path('show_episode', {'id': episode.id }) }}"><p>{{ episode.number }} - {{ episode.title}}</p></a>
+                <a href="{{ path('show_episode',{'id': episode.id }) }}"><p>{{ episode.number }} - {{ episode.title}}</p></a>
             {% else %}
                 Aucun épisode trouvés.
             {% endfor %}
