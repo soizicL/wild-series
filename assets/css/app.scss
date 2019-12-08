@@ -1,40 +1,16 @@
-// assets/css/app.scss
-
-// customize some Bootstrap variables
-$primary: darken(#428bca, 20%);
-
-// the ~ allows you to reference things in node_modules
-@import "~bootstrap/scss/bootstrap";
-
-// ------------------------CSS----------------------------//
-body {
-    background-color: lightgrey;
-
-}
+@import 'variables.scss';
+@import 'fonts.scss';
 
 .navbar {
-    background-color: #2a3b6d;
-}
-
-a {
-    color : white;
-    font-size: 22px;
-    margin-right: 10px;
-    font-family: "Café Françoise", sans-serif;
-}
-
-.formatCardDeck {
-    height: 60rem;
-}
-
-.formatImg {
-    height: 40rem;
-}
-
-/*.poster {
-    max-width: 18rem;
-
-}*/
-
-/*----------------PROGRAM------------------------*/
-
+    background-color: $blue;
+} .nav-link {
+      color : white;
+      font-size : 20px;
+  }  .navbar-brand {
+         font-family: $typo-title;
+         color : white;
+         font-size: 35px;
+         &:hover {
+             color : $dark;
+         }
+     }

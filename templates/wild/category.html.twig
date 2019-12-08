@@ -1,29 +1,29 @@
-{# templates/wild/show.html.twig #}
 {% extends 'base.html.twig' %}
-{% block title %}All categories{% endblock %}
+{% block title %} {{categoryname}}{% endblock %}
 
-{% block body %}
-
-
-    <h1 class="text-center pt-3 pb-3">Category : {{ category.name }}</h1>
-
-    <div class="container-fluid">
-        <div class="d-flex justify-content-center">
-            <div class="row justify-content-center">
+    {% block body %}
+        <section class="text-center">
+            <h1>{% if categoryname is empty %} Aucune categorie sélectionnée, veuillez sélectionner une categorie {% else %}{{categoryname}} {% endif %} </h1>
+            <div class="row justify-content-around">
                 {% for program in programs %}
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center pb-4">
-                        <div class="card-deck formatCardDeck">
-                            <div class="card formatCard" >
-                                <img class="card-img-top formatImg" src="{{ program.poster }}" alt="{{ program.title }} poster">
-                                <div class="card-body ">
-                                    <h5 class="card-title">{{ program.id }} - {{ program.title  }}</h5>
+                    <div class="flex-column">
+                        <div class="card-deck">
+                            <div class="card" style="width: 18rem">
+                                <img src="{{program.poster}}" class="card-img-top" alt="poster">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ program.title }}</h5>
                                     <p class="card-text">{{ program.summary }}</p>
+                                    <a href="show/{{ (program.title|replace({" ":"-"}) | title)|lower }}" class="btn btn-primary">Choisir</a>
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
+                {% else %}
+                    Aucune série trouvée.
                 {% endfor %}
             </div>
-        </div>
-    </div>
-{% endblock %}
+        </section>
+
+    {% endblock %}

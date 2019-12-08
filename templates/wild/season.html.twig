@@ -1,27 +1,29 @@
+{% extends 'base.html.twig' %}
 
-{% extends "base.html.twig" %}
-{% block title %}All seasons{% endblock %}
+
 {% block body %}
+
     <div class="media">
-        <img class="align-self-start mr-3" src="{{program.poster}}" alt="{{ program.title }} poster">
+        <img class="align-self-start mr-3" src="{{programs.poster}}" alt="{{ programs.title }} poster">
         <div class="media-body">
-            <h1 class="mt-0 text-center">{{ program.title }}</h1>
-            <h2>{{ program.summary }}</h2>
-            <h3 class="text-center mb-4">Categorie : {{ program.category.name }}</h3>
-            <h4 class="mb-5"> {{ seasons.description }} :</h4>
+            <h2 class="mt-0 text-center">{{ programs.title }}</h2>
+            <h4>{{ programs.summary }}</h4>
+            <br/>
+            <h4 class="mb-5">Categorie : {{ programs.category.name }}</h4>
+            <h5>{{ season.year }} - {{ season.description}}</h5>
             {% for episode in episodes %}
-                <a href="{{ path('show_episode',{'id': episode.id }) }}"><p> {{ episode.title}}</p></a>
-            {% else %}
-                Aucun épisode trouvés.
+                <ul>
+                    <h5>{{ episode.title }}</h5>
+                    <a href="{{ path('show_episode', {id: episode.id}) }}">Episode n°: {{ episode.number }}</a>
+
+                </ul>
             {% endfor %}
         </div>
-        <div>
-            <a href="{{ path('show_program', {'id': program.title }) }}">
-                Retour au programme
-            </a><br>
-            <a href="{{ path('wild_index') }}">
-                Retour à l'accueil
-            </a>
-        </div>
     </div>
+    <a href="/show/{{ (programs.title|replace({" ":"-"}) | title)|lower }}" >Précédent</a>
+    </br>
+    <a href="{{ path('index') }}">
+        Retour à l'accueil
+    </a>
+
 {% endblock %}
