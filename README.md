@@ -22,4 +22,8 @@ Quête N°11 : Gardez la Form
 
 lien video challenge : https://www.loom.com/share/dcae8323fbb5491a8ef59bc1cd1c2967
 
+Quête N°12 : CRUD
+
+lien video challenge : https://www.loom.com/share/68c8c863d0e84006b65062218745212d
+
  
