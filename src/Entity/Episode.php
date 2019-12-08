@@ -37,6 +37,16 @@ class Episode
      */
     private $season;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Program", inversedBy="episodes")
+     */
+    private $program;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $image;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +96,30 @@ class Episode
     public function setSeason(?Season $season): self
     {
         $this->season = $season;
+
+        return $this;
+    }
+
+    public function getProgram(): ?Program
+    {
+        return $this->program;
+    }
+
+    public function setProgram(?Program $program): self
+    {
+        $this->program = $program;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }

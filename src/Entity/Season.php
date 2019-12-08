@@ -39,6 +39,11 @@ class Season
      */
     private $episodes;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $cover;
+
     public function __construct()
     {
         $this->episodes = new ArrayCollection();
@@ -112,6 +117,18 @@ class Season
                 $episode->setSeason(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCover(): ?string
+    {
+        return $this->cover;
+    }
+
+    public function setCover(?string $cover): self
+    {
+        $this->cover = $cover;
 
         return $this;
     }

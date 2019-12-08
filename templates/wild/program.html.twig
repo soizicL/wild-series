@@ -1,3 +1,4 @@
+
 {# templates/wild/program.html.twig #}
 {% extends 'base.html.twig' %}
 {% block title %} {{ program.title }} {% endblock %}
@@ -7,16 +8,16 @@
     <div class="media">
         <img class="align-self-start mr-3" src="{{ program.poster }}" alt="{{ program.title }} poster">
         <div class="media-body">
-            <h1 class="mt-2">{{ program.title }}</h1>
-            <p>{{ program.summary }}</p>
-            <p>Categories : {{ program.title }}</p>
-            <h2 class="my-5">Saison : </h2>
+            <h1 class="mt-2 text-center">{{ program.title }}</h1>
+            <h2>{{ program.summary }}</h2>
+            <h4 class="mt-3">Categories : {{ program.title }}</h4>
+            <h2 class="my-5 text-center">Saison : </h2>
             {% for season in seasons %}
-            <a href="{{ path('show_season', {'id' : season.id}) }}">
-                <p>{{ season.description }} - {{ season.year }}</p>
-            </a>
+                <a href="{{ path('show_season', {'id' : season.id}) }}">
+                    <p style="font-size: medium;">{{ season.year }} - {{ season.description }}</p>
+                </a>
             {% else %}
-            Aucun épisode trouvé
+                Aucun épisode trouvé
             {% endfor %}
         </div>
         <div>

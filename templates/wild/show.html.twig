@@ -5,9 +5,9 @@
 {% block body %}
 
 
-<div class="container-fluid">
+    <div class="container-fluid">
 
-    <div class="media">
+        <div class="media">
 
 
             <img class="align-self-start mr-3" src="{{ program.poster }}" alt="{{ program.title }} poster">
@@ -17,13 +17,12 @@
                 <p>Categorie : {{ program.category.name }}</p>
             </div>
 
+        </div>
+
+
+        <a href="{{ path('wild_index') }}">
+            Retour à l'accueil
+        </a>
     </div>
 
-
-    <a href="{{ path('wild_index') }}">
-        Retour à l'accueil
-    </a>
-</div>
-
 {% endblock %}
-

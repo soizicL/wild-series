@@ -5,34 +5,25 @@
 {% block body %}
 
 
-        <h1 class="text-center pt-3 pb-3">Category : {{ category.name }}</h1>
+    <h1 class="text-center pt-3 pb-3">Category : {{ category.name }}</h1>
 
-        <div class="container-fluid">
-            <div class="d-flex justify-content-center">
-                <div class="row justify-content-center">
-                    {% for program in programs %}
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center pb-4">
-                            <div class="card-deck formatCardDeck">
-                                <div class="card formatCard" >
-                                    <img class="card-img-top formatImg" src="{{ program.poster }}" alt="{{ program.title }} poster">
-                                    <div class="card-body ">
-                                        <h5 class="card-title">{{ program.id }} - {{ program.title  }}</h5>
-                                        <p class="card-text">{{ program.summary }}</p>
-                                    </div>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+            <div class="row justify-content-center">
+                {% for program in programs %}
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center pb-4">
+                        <div class="card-deck formatCardDeck">
+                            <div class="card formatCard" >
+                                <img class="card-img-top formatImg" src="{{ program.poster }}" alt="{{ program.title }} poster">
+                                <div class="card-body ">
+                                    <h5 class="card-title">{{ program.id }} - {{ program.title  }}</h5>
+                                    <p class="card-text">{{ program.summary }}</p>
                                 </div>
                             </div>
                         </div>
-                    {% endfor %}
-                </div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
-
-
-
-
-        <a href="{{ path('wild_index') }}">
-            Retour à l'accueil
-        </a>
-
-
+    </div>
 {% endblock %}
