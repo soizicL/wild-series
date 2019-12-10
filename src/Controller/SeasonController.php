@@ -36,7 +36,7 @@ class SeasonController extends AbstractController
             $entityManager->flush();
             return $this->redirectToRoute('season_index');
         }
-        return $this->render('season/addcategory.html.twig', [
+        return $this->render('season/new.html.twig', [
             'season' => $season,
             'form' => $form->createView(),
         ]);

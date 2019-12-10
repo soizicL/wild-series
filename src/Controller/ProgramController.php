@@ -37,7 +37,7 @@ class ProgramController extends AbstractController
             $entityManager->persist($program);
             $entityManager->flush();
 
-            return $this->redirectToRoute('program_index');
+            return $this->redirectToRoute('index');
         }
         return $this->render('program/new.html.twig', [
             'program' => $program,
@@ -64,7 +64,7 @@ class ProgramController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('program_index');
+            return $this->redirectToRoute('index');
         }
         return $this->render('program/edit.html.twig', [
             'program' => $program,
@@ -81,6 +81,6 @@ class ProgramController extends AbstractController
             $entityManager->remove($program);
             $entityManager->flush();
         }
-        return $this->redirectToRoute('program_index');
+        return $this->redirectToRoute('index');
     }
 }
