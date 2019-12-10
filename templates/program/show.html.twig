@@ -34,7 +34,18 @@
         </tbody>
     </table>
 
-    <a href="{{ path('program_index') }}">back to list</a>
+    <strong>Acteur : </strong>
+    <ul>
+        {% for actor in program.actors %}
+        <a href="{{ path('actor', {name: actor.name|lower |replace({' ':'-'})}) }}">
+            <li>{{ actor.name }}</li>
+        </a>
+        {% else %}
+            <li>Aucun acteur pour cette série</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ path('index') }}">back to list</a>
 
     <a href="{{ path('program_edit', {'id': program.id}) }}">edit</a>
 
